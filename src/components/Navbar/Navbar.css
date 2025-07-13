@@ -57,4 +57,28 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.navbar-profile .dropdown {
+  position: absolute;
+  top: 100%; /* Adjust as needed to appear just below profile image */
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 18px 22px;
+  border-radius: 2px;
+  text-decoration: underline;
+  z-index: 1;
+  display: none;
+}
+
+.navbar-profile .dropdown p {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.navbar-profile:hover .dropdown,
+.navbar-profile .dropdown:hover {
+  display: block;
 }
