@@ -1,0 +1,66 @@
+.hero {
+    position: relative;
+    height: 100vh; /* full screen */
+    overflow: hidden;
+}
+
+.banner-img{
+    width: 100%;
+    mask-image: linear-gradient(to right,transparent, black 75%);
+    -webkit-mask-image: linear-gradient(to right,transparent, black 75%);
+}
+.hero-caption{
+    position: absolute;
+    top: 60%;
+    padding-left: 6%;
+    color: white;
+    width: 100%;
+}
+.caption-img{
+    width: 20%;
+    margin-top: 20px;
+}
+.hero-btns{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+
+}
+.hero-btns .btn img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.hero-btns .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 6px 14px;
+    height: auto;         /* Make sure it's not being stretched */
+    min-height: 32px;     /* Optional: small base height */
+    min-width: 100px;     /* Optional: limit width */
+    background: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.hero-btns .btn.dark-btn {
+    background: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+.hero-btns .btn:hover{
+    background: #ffffffbf;
+   
+}
+.hero-btns .btn.dark-btn:hover {
+    background:#6d6d6e66;
+}
+.more-cards{
+    padding-left: 6%;
+}
