@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { toast } from "react-toastify";
 const firebaseConfig = {
   apiKey: "AIzaSyDxYCBvUTvNIqi8xt5KfmDlUd5SOnexavU",
   authDomain: "netflix-clone-12f49.firebaseapp.com",
@@ -34,7 +35,8 @@ try{
 
 }catch(error){
     console.log(error);
-    alert(error);
+    toast.error(error.code.split('/')[1].replace(/-/g,' ')); // to remove the firebase error code and replace it with a user friendly message
+    
 }
 }
 const login = async (email,password) => {
@@ -43,7 +45,7 @@ const login = async (email,password) => {
                
     } catch (error) {
       console.log(error);
-      alert(error);  
+      toast.error(error.code.split('/')[1].replace(/-/g,' ')); // to remove the firebase error code and replace it with a user friendly message
     }
 }
 const logout =  () => {
